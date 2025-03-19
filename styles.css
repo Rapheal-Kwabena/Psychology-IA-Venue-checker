@@ -1,0 +1,286 @@
+/* CSS Styles */
+:root {
+    --ug-blue: #00509E;
+    --ug-light-blue: #0073CF;
+    --ug-accent: #F8F8F8;
+    --text-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--ug-blue);
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.university-logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60px;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.course-title {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.search-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 25px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-top: 4px solid var(--ug-blue);
+}
+
+.input-group {
+    margin: 20px 0;
+}
+
+input {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    width: 250px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: var(--ug-blue);
+    outline: none;
+}
+
+button {
+    background-color: var(--ug-blue);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--ug-light-blue);
+}
+
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+}
+
+.result.success {
+    background-color: #e3f2fd;
+    border: 2px solid var(--ug-blue);
+    display: block;
+}
+
+.result.error {
+    background-color: #ffebee;
+    border: 2px solid #f44336;
+    display: block;
+}
+
+.highlight {
+    color: var(--ug-blue);
+    font-weight: bold;
+}
+
+.batch-details {
+    margin-top: 30px;
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.batch-details h3 {
+    color: white;
+    background-color: var(--ug-blue);
+    padding: 12px 15px;
+    margin: 0;
+}
+
+.location-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.location-item {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.location-item:last-child {
+    border-bottom: none;
+}
+
+.location-item.active {
+    background-color: #e3f2fd;
+    border-left: 4px solid var(--ug-blue);
+}
+
+.location-item .time-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+footer {
+    background-color: var(--ug-blue);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.batch-toggle {
+    margin: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.batch-btn {
+    background-color: #f0f0f0;
+    color: var(--text-color);
+    border: 1px solid #ddd;
+    padding: 10px 18px;
+    transition: all 0.3s;
+    flex: 1;
+    min-width: 120px;
+    max-width: 200px;
+}
+
+.batch-btn.active {
+    background-color: var(--ug-blue);
+    color: white;
+}
+
+.campus-batch {
+    font-weight: bold;
+    color: var(--ug-blue);
+}
+
+.exam-info {
+    background-color: var(--ug-accent);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    border-left: 4px solid var(--ug-blue);
+}
+
+.exam-info p {
+    margin: 5px 0;
+}
+
+.student-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.info-item {
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.created-by {
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.campus-selection {
+    margin: 20px 0;
+}
+
+#campus-select {
+    padding: 10px;
+    width: 250px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#campus-select:focus {
+    border-color: var(--ug-blue);
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .university-logo {
+        display: none;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    input, #campus-select {
+        width: 100%;
+    }
+    
+    .batch-btn {
+        min-width: 100px;
+    }
+}
